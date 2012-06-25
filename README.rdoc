@@ -1,3 +1,18 @@
 == doclib-broker
 
-A Document Library proxy.
+A Document Library API.
+
+This API will proxy requests to downstream document library/storage repositories, such as Liferay. The complexities of the calls are hidden from the requesting client.
+
+The API is versioned, allowing new functionality to be added over time without breaking existing clients/callees.
+
+Examples:
+* http://localhost:3000/api/v1/liferay_version - returns the current Axis version of Liferay Web Services.
+* http://localhost:3000/api/v1/nicher_version - another downstream document library - storage mechanism.
+
+To Do:
+
+* Force SSL for all interactions.
+* Implement OAuth.
+
+
