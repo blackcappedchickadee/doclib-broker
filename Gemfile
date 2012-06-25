@@ -5,7 +5,7 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mysql2'
 
 
 # Gems used only for assets and not required
@@ -22,18 +22,18 @@ end
 
 gem 'jquery-rails'
 
-gem "rspec-rails", :group => [:test, :development]
+gem 'rspec-rails', :group => [:test, :development]
 group :test do
-  gem "factory_girl_rails"
-  gem "capybara"
-  gem "guard-rspec"
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
 end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+#gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -43,3 +43,16 @@ end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+#rabl json templating
+gem 'rabl'
+
+#for web services consumption
+gem 'savon'
+
+#for longer running (async) processes where the consuming client does not want to wait,
+#but rather receive notification when process has either completed or failed.
+gem 'delayed_job_active_record'
+#to run enqueued jobs
+gem 'daemons'
+

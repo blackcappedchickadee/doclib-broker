@@ -1,0 +1,2 @@
+module LiferayVersionHelper
+end
